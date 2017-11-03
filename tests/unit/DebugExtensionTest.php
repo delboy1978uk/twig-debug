@@ -2,6 +2,7 @@
 
 namespace DelTesting;
 
+use use Codeception\Util\Stub;
 use Del\Twig\DebugExtension;
 use Twig_Environment;
 
