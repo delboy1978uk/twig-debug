@@ -16,7 +16,7 @@
     },
     "autoload":{
         "psr-4":{
-            "Del\\Twig\\":"src/"
+            "Del\\Twig\\":"src/",
             "DelTesting\\": "tests/unit/"
         }
     }
