@@ -1,0 +1,23 @@
+{
+    "name": "delboy1978uk/twig-debug",
+    "description": "A Twig Xdebug Breakpoint Extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Derek Stephen McLean",
+            "email": "delboy1978uk@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.4"
+    },
+    "require-dev":{
+        "codeception/codeception":"dev-master"
+    },
+    "autoload":{
+        "psr-4":{
+            "Del\\Twig\\":"src/"
+            "DelTesting\\": "tests/unit/"
+        }
+    }
+}
