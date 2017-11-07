@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "twig/twig": "^2.4"
+        "twig/twig": "*"
     },
     "require-dev":{
         "codeception/codeception":"dev-master"
