@@ -8,7 +8,7 @@ composer require delboy1978uk/twig-debug
 ```
 ## configuration
 Register the extension with Twig:
-```
+```php
 <?php
 
 use Del\Twig\DebugExtension;
