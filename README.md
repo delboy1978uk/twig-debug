@@ -26,5 +26,5 @@ twig_debugger:
 ## usage
 Within a Twig block, simply add:
 ```
-{{ breakpoint"() }}
+{{ breakpoint() }}
 ```
