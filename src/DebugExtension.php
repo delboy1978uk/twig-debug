@@ -11,12 +11,15 @@ class DebugExtension extends Twig_Extension
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName() 
     {
         return 'breakpoint';
     }
 
-    public function getFunctions() : array
+    /**
+     * @return array
+     */
+    public function getFunctions()
     {
         return array(
             new Twig_SimpleFunction('breakpoint', [$this, 'setBreakpoint'], ['needs_environment' => true, 'needs_context' => true]),
@@ -25,6 +28,8 @@ class DebugExtension extends Twig_Extension
 
     /**
      * pause the code!
+     * @param Twig_Environment $environment
+     * @param $context
      */
     public function setBreakpoint(Twig_Environment $environment, $context)
     {
