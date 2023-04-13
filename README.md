@@ -18,8 +18,7 @@ $twig->addExtension(new DebugExtension());
 ```
 Or, if you are using Symfony, add it to your services.yml like this:
 ```yaml
-twig_debugger:
-    class: Del\Twig\DebugExtension
+Del\Twig\DebugExtension:
     tags:
         - { name: twig.extension }
 ```
