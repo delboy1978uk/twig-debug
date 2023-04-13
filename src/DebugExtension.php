@@ -2,11 +2,11 @@
 
 namespace Del\Twig;
 
-use Twig_Environment;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class DebugExtension extends Twig_Extension
+class DebugExtension extends AbstractExtension
 {
     /**
      * @return string
@@ -21,17 +21,17 @@ class DebugExtension extends Twig_Extension
      */
     public function getFunctions()
     {
-        return array(
-            new Twig_SimpleFunction('breakpoint', [$this, 'setBreakpoint'], ['needs_environment' => true, 'needs_context' => true]),
-        );
+        return [
+            new TwigFunction('breakpoint', [$this, 'setBreakpoint'], ['needs_environment' => true, 'needs_context' => true]),
+        ];
     }
 
     /**
      * pause the code!
-     * @param Twig_Environment $environment
+     * @param Environment $environment
      * @param $context
      */
-    public function setBreakpoint(Twig_Environment $environment, $context)
+    public function setBreakpoint(Environment $environment, $context)
     {
         if (function_exists('xdebug_break')) {
             xdebug_break();

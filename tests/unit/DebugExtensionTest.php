@@ -2,11 +2,12 @@
 
 namespace DelTesting;
 
+use Codeception\TestCase\Test;
 use Codeception\Util\Stub;
 use Del\Twig\DebugExtension;
-use Twig_Environment;
+use Twig\Environment;
 
-class DebugExtensionTest extends \Codeception\TestCase\Test
+class DebugExtensionTest extends Test
 {
    /**
     * @var \UnitTester
@@ -18,7 +19,7 @@ class DebugExtensionTest extends \Codeception\TestCase\Test
      */
     public function testBlah()
     {
-	$stub = Stub::make(Twig_Environment::class, []);
+	$stub = Stub::make(Environment::class, []);
         
 	$ext = new DebugExtension();
 	$this->assertEquals('breakpoint',$ext->getName());
